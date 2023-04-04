@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    const jsonString = `
+      {
+        "list": [
+         {
+          "name": "Petr",
+          "age": "20",
+          "prof": "mechanic"
+         },
+         {
+          "name": "Vova",
+          "age": "60",
+          "prof": "pilot"
+         }
+        ]
+      }
+      `;
+
+    //console.log('jsonList', jsonString);
+    const data = JSON.parse(jsonString);
+    //console.log('data', data);
+    const list = data.list;
+    //console.log("list", list);
+
+    const result = {
+      name: list.name,
+      age: list.age,
+      prof: list.prof,
+    };
+
+    const client = [{name: list[0].name + '', age: list[0].age + '', prof: list[0].prof},
+                    {name: list[1].name + '', age: list[1].age + '', prof: list[1].prof}]
+
+    
+    console.log(client)
+
+        
+    </script>
+</body>
+</html>
+
